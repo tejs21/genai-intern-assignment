@@ -1,0 +1,13 @@
+{
+  "patient_id": "P022",
+  "patient_name": "Fatima Khan 22",
+  "discharge_date": "2024-04-24",
+  "primary_diagnosis": "Hypertensive Nephrosclerosis",
+  "medications": [
+    "Amlodipine 5mg daily"
+  ],
+  "dietary_restrictions": "Low sodium, fluid restriction 1.5L/day",
+  "follow_up": "Nephrology clinic in 2 weeks",
+  "warning_signs": "Swelling, shortness of breath, decreased urine output",
+  "discharge_instructions": "Monitor BP daily; weigh yourself daily"
+}

@@ -1,0 +1,13 @@
+{
+  "patient_id": "P025",
+  "patient_name": "Maria Silva 25",
+  "discharge_date": "2025-07-11",
+  "primary_diagnosis": "Hypertensive Nephrosclerosis",
+  "medications": [
+    "Prednisone 20mg daily"
+  ],
+  "dietary_restrictions": "Low sodium, fluid restriction 1.5L/day",
+  "follow_up": "Nephrology clinic in 2 weeks",
+  "warning_signs": "Swelling, shortness of breath, decreased urine output",
+  "discharge_instructions": "Monitor BP daily; weigh yourself daily"
+}

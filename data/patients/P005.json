@@ -1,0 +1,13 @@
+{
+  "patient_id": "P005",
+  "patient_name": "Anita Sharma 5",
+  "discharge_date": "2025-05-24",
+  "primary_diagnosis": "Chronic Kidney Disease Stage 3",
+  "medications": [
+    "Amlodipine 5mg daily"
+  ],
+  "dietary_restrictions": "Low sodium, fluid restriction 1.5L/day",
+  "follow_up": "Nephrology clinic in 2 weeks",
+  "warning_signs": "Swelling, shortness of breath, decreased urine output",
+  "discharge_instructions": "Monitor BP daily; weigh yourself daily"
+}

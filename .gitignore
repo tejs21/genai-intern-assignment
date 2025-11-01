@@ -1,0 +1,59 @@
+# ----------------------------
+# Python & Environment Files
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+*.db
+*.pkl
+*.DS_Store
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Environment Variables
+.env
+.env.*
+
+# ----------------------------
+# Logs and Temporary Files
+# ----------------------------
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ----------------------------
+# IDE / Editor Settings
+# ----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------------
+# OS Specific Files
+# ----------------------------
+Thumbs.db
+Desktop.ini
+
+# ----------------------------
+# Data Files (Optional large cache)
+# ----------------------------
+data/reference_embeddings.pkl
+data/chroma/
+
+# Keep folder structure
+!.gitkeep
+
+# ----------------------------
+# Streamlit Cache
+# ----------------------------
+.streamlit/
+.streamlit_cache/

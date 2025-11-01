@@ -1,0 +1,14 @@
+{
+  "patient_id": "P013",
+  "patient_name": "Maria Silva 13",
+  "discharge_date": "2024-07-31",
+  "primary_diagnosis": "Acute Kidney Injury",
+  "medications": [
+    "Lisinopril 10mg daily",
+    "Furosemide 20mg daily"
+  ],
+  "dietary_restrictions": "Low sodium, fluid restriction 1.5L/day",
+  "follow_up": "Nephrology clinic in 2 weeks",
+  "warning_signs": "Swelling, shortness of breath, decreased urine output",
+  "discharge_instructions": "Monitor BP daily; weigh yourself daily"
+}

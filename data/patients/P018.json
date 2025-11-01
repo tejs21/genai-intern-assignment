@@ -1,0 +1,13 @@
+{
+  "patient_id": "P018",
+  "patient_name": "Asha Nair 18",
+  "discharge_date": "2024-06-18",
+  "primary_diagnosis": "Acute Kidney Injury",
+  "medications": [
+    "Amlodipine 5mg daily"
+  ],
+  "dietary_restrictions": "Low sodium, fluid restriction 1.5L/day",
+  "follow_up": "Nephrology clinic in 2 weeks",
+  "warning_signs": "Swelling, shortness of breath, decreased urine output",
+  "discharge_instructions": "Monitor BP daily; weigh yourself daily"
+}
