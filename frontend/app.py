@@ -60,7 +60,7 @@ if st.sidebar.button("Reset Session"):
 # ------------------------------------------------------------
 st.markdown("---")
 st.subheader("Receptionist Desk")
-st.write("Please identify yourself using your **name or patient ID** (e.g., `P001`).")
+st.write("Hello! I'm your post-discharge care assistant. Please identify yourself using your **name or patient ID** (e.g., `P001`).")
 
 with st.form("receptionist_form"):
     user_input = st.text_input("Enter your name or patient ID:")
@@ -82,14 +82,19 @@ with st.form("receptionist_form"):
                 st.error(f"Backend call failed: {e}")
                 data = {"text": "Backend not reachable."}
 
-            # Store response in chat log
+            # Store receptionist response
             st.session_state.chat.append({"from": "receptionist", "text": data.get("text")})
 
             # Store patient info if found
             if data.get("patient"):
                 st.session_state.patient = data.get("patient")
+                # Add an automatic handoff message to simulate natural workflow
+                st.session_state.chat.append({
+                    "from": "receptionist",
+                    "text": "If you have any medical concerns or follow-up questions, I'll connect you with our Clinical AI Agent."
+                })
 
-# Display all messages so far
+# Display chat so far
 for msg in st.session_state.chat:
     if msg["from"] == "receptionist":
         st.info("Receptionist: " + msg["text"])
@@ -101,19 +106,26 @@ for msg in st.session_state.chat:
 # ------------------------------------------------------------
 st.markdown("---")
 st.subheader("Clinical Agent")
-st.write("Ask follow-up medical questions (non-emergency).")
+st.write("Now you can ask your follow-up medical questions (non-emergency).")
 
 q = st.text_input("Your clinical question:")
+
 if st.button("Ask Clinical Agent"):
     if not st.session_state.patient:
         st.warning("No patient selected. Please identify yourself above first.")
     elif not q:
         st.warning("Please enter a question.")
     else:
+        # Add receptionist-style routing message before clinical reply
+        st.session_state.chat.append({
+            "from": "receptionist",
+            "text": "That sounds like a medical concern. Let me connect you with our Clinical AI Agent..."
+        })
+
         try:
             # Call backend /clinical endpoint
             payload = {"patient_id": st.session_state.patient["patient_id"], "question": q}
-            resp = requests.post(f"{BACKEND_URL}/clinical", json=payload, timeout=20)
+            resp = requests.post(f"{BACKEND_URL}/clinical", json=payload, timeout=25)
 
             if resp.status_code == 200:
                 data = resp.json()
