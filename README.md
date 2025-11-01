@@ -67,6 +67,7 @@ FLASK_PORT=5000
 BACKEND_URL=http://localhost:5000
 
 ```
+---
 
 ## Running the Project
 ### 1. Ingest the Reference PDF
@@ -85,6 +86,7 @@ streamlit run frontend/app.py
 ```
 Access it at http://localhost:8501
 
+---
 ## How It Works
 
 1. **Patient enters name or ID Receptionist retrieves discharge info.**
@@ -92,6 +94,7 @@ Access it at http://localhost:8501
 3. **If confidence is low → performs web search.**
 4. **Returns answers with citations and logs interaction.**
 
+---
 ## Project Structure
 ```bash
 genai-intern/
@@ -105,6 +108,7 @@ genai-intern/
 └── requirements.txt
 ```
 
+---
 ## Features
 - **25+ dummy patient records**
 - **Receptionist & Clinical agents**
@@ -115,6 +119,7 @@ genai-intern/
 - **JSON-based data retrieval**
 - **Optional OpenAI integration**
 
+---
 ## Disclaimer
 This AI assistant is developed for educational and research purposes only.  
 It does not provide medical advice. Always consult qualified healthcare professionals for diagnosis or treatment.
